@@ -1,11 +1,11 @@
-package com.ualr.helloworld;
+package com.ualr.firstapp;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ualr.helloworld.databinding.ActivityMainBinding;
+import com.ualr.firstapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
