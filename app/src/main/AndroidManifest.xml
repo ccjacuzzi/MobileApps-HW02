@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TODO 01. **DONE** Change the package name of the app. New package name: com.ualr.firstapp" -->
 <!-- TODO 02. **DONE** Change the app name. New app name: First App -->
-<!-- TODO 03. Change the app icon. The new one might use the ic_country.svg image provided as foreground and a solid black color as background-->
+<!-- TODO 03. **DONE** Change the app icon. ic_country image with light blue background.-->
 
 <!-- Comments are Not Allowed inside Manifest Tag!!!! -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
