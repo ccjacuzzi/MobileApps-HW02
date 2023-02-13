@@ -24,6 +24,7 @@
             android:layout_marginBottom="24dp"
             android:text="@string/default_msg"
             android:textAlignment="center"
+            android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#009688"
             android:textSize="32sp"
@@ -49,6 +50,7 @@
             android:onClick="showTextMessage"
             android:text="show text"
             android:textAlignment="textStart"
+            android:layout_gravity="start"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -63,13 +65,14 @@
             android:onClick="cleanTextField"
             android:text="CLEAN TEXT"
             android:textAlignment="textStart"
+            android:layout_gravity="start"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
         <!-- TODO 04. **DONE** Set a new width value (120dp) for the button whose id is "showBtn" -->
         <!-- TODO 05. **DONE** Add a new property to the "showBtn" to align the text within to the left side of the button. I used textAlignment. Another option would be gravity. -->
-        <!-- TODO 08. Add a new button with the id "cleanBtn" to the layout with the same properties of the show button (showBtn) -->
-        <!-- TODO 09. Link the "cleanBtn" to the "cleanTextField" method so whenever the user taps the button the text field gets cleaned -->
+        <!-- TODO 08. **DONE** Add a new button with the id "cleanBtn" to the layout with the same properties of the show button (showBtn) -->
+        <!-- TODO 09. **DONE** Link the "cleanBtn" to the "cleanTextField" method so whenever the user taps the button the text field gets cleaned -->
 
     </LinearLayout>
 

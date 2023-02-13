@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
             handler1.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    // code to be executed after a specified time interval
+                    // change the hint back after 2 seconds
                     textView.setHint("Write the message.");
                 }
-            }, 2000); // 5000 milliseconds = 5 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
         }
         else{
             // Only run this line to swap the text if the user has entered a message
@@ -46,11 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // TODO 07. Create a new method called cleanTextField to delete the text inside the text field
+    // TODO 07. **DONE** Create a new method called cleanTextField to delete the text inside the text field
     public void cleanTextField(View view){
-        //clean text inside the text field
+        //Goal: clean text inside the text field
+        // Text field = <EditText>
 
         // If text field is empty, there is nothing to clean
+        // Let the user know by changing the hint message
         if(TextUtils.isEmpty(mBinding.userInputET.getText().toString())){
             TextView textView = findViewById(R.id.userInputET);
             textView.setHint("Text field already clean.");
@@ -60,15 +62,18 @@ public class MainActivity extends AppCompatActivity {
             handler2.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    // code to be executed after a specified time interval
+                    // Change the hint back after 2 seconds
                     textView.setHint("Write the message.");
                 }
-            }, 2000); // 5000 milliseconds = 5 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
 
         }
+
         // If text field is not empty, clean it out
         else{
+            // Change the text string to an empty string
             mBinding.userInputET.setText("");
+            // Remove the focus from the text input box (make cursor go away)
             mBinding.userInputET.clearFocus();
         }
 
