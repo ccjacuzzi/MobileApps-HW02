@@ -28,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
             // Change hint if user has not entered a message
             TextView textView = findViewById(R.id.userInputET);
             textView.setHint("You must type something first.");
+
+            // Handler - adds a delay before setting the hint back
+            Handler handler1 = new Handler();
+            handler1.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // code to be executed after a specified time interval
+                    textView.setHint("Write the message.");
+                }
+            }, 2000); // 5000 milliseconds = 5 seconds
         }
         else{
             // Only run this line to swap the text if the user has entered a message
@@ -46,20 +56,20 @@ public class MainActivity extends AppCompatActivity {
             textView.setHint("Text field already clean.");
 
             // Handler - adds a delay before setting the hint back
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
+            Handler handler2 = new Handler();
+            handler2.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     // code to be executed after a specified time interval
-                    textView.setHint("You must type something first.");
+                    textView.setHint("Write the message.");
                 }
-            }, 5000); // 5000 milliseconds = 5 seconds
+            }, 2000); // 5000 milliseconds = 5 seconds
 
         }
         // If text field is not empty, clean it out
         else{
-            // Remember to change userInputET to the new ID
-            mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+            mBinding.userInputET.setText("");
+            mBinding.userInputET.clearFocus();
         }
 
     }
